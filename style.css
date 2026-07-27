@@ -1,298 +1,198 @@
 /* =====================================
-   BANQUE AGRICOLE BNP
-   IDENTITE VISUELLE
+   NOVA CAPITAL - STYLE PREMIUM
 ===================================== */
 
-* {
-    box-sizing: border-box;
+
+*{
+    box-sizing:border-box;
     font-family:
-    -apple-system,
-    BlinkMacSystemFont,
+    "Inter",
     "Segoe UI",
-    Roboto,
-    Helvetica,
     Arial,
     sans-serif;
 }
 
 
-html, body {
+body{
 
-    margin: 0;
-    padding: 0;
-    height: 100%;
+    margin:0;
+    padding:0;
 
-    background: #f5f7fa;
-    color: #0f172a;
+    background:#071426;
+
+    color:#172033;
 
 }
+
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    transition:.3s;
+
+}
+
+
+
+.hidden{
+
+    display:none!important;
+
+}
+
+
 
 
 
 /* =====================================
-   LOGO
+   IDENTITE VISUELLE
 ===================================== */
 
 
-.brand-logo-main {
+.brand h1{
 
-    font-size: 2.8rem;
-    font-weight: 900;
-    letter-spacing: 1px;
+    font-size:38px;
 
-    color: #003B5C;
+    letter-spacing:3px;
 
-    text-transform: uppercase;
+    margin:0;
 
-}
+    color:#d4af37;
 
-
-.brand-logo-main span {
-
-    color: #16803C;
+    font-weight:900;
 
 }
 
 
+.brand h1 span{
 
-.brand-logo-form {
-
-    font-size: 2rem;
-    font-weight: 900;
-
-    text-align: center;
-
-    color: #003B5C;
+    color:white;
 
 }
 
 
 
-.brand-logo-form span {
+.brand p{
 
-    color: #16803C;
+    color:#94a3b8;
 
-}
-
-
-
-.brand-logo-header {
-
-    font-size: 1.05rem;
-
-    font-weight: 900;
-
-    color: #003B5C;
+    margin-top:10px;
 
 }
 
 
 
-.brand-logo-header span {
-
-    color: #16803C;
-
-}
 
 
 
 /* =====================================
-   ECRAN CONNEXION
+   PAGE CONNEXION
 ===================================== */
 
 
-.login-wrapper {
+.login-page{
 
-    display: flex;
+    height:100vh;
 
-    width: 100vw;
-    height: 100vh;
+    width:100%;
 
-}
+    display:flex;
 
+    align-items:center;
 
-
-.left-banner {
-
-
-    flex: 1;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 60px;
+    justify-content:center;
 
 
     background:
 
     linear-gradient(
     135deg,
-    #003B5C,
-    #001f33
+    #071426,
+    #13294b
     );
 
 
-
-    color:white;
-
-
 }
 
 
 
-.banner-content {
-
-    max-width: 500px;
-
-}
 
 
-
-.bank-symbol {
-
-    font-size: 4rem;
-
-    margin-bottom: 15px;
-
-}
+.login-card{
 
 
-
-.tagline {
-
-    color:#d1fae5;
-
-    font-size:1.2rem;
-
-    line-height:1.6;
-
-}
-
-
-
-.security-points {
-
-    margin-top:35px;
-
-}
-
-
-
-.security-points p {
-
-    color:white;
-
-    font-size:0.95rem;
-
-}
-
-
-
-/* FORMULAIRE */
-
-
-.right-form-container {
-
-
-    flex:1;
-
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
+    width:380px;
 
     background:white;
 
-    padding:40px;
+    border-radius:24px;
+
+    padding:35px;
+
+
+    box-shadow:
+
+    0 25px 60px
+    rgba(0,0,0,.35);
 
 
 }
 
 
 
-.form-box {
+
+.login-form{
 
 
-    width:100%;
-
-    max-width:400px;
-
-
-}
-
-
-
-.login-title {
-
-
-    text-align:center;
-
-    color:#64748b;
-
-    margin-bottom:30px;
-
-    font-size:1rem;
-
-}
-
-
-
-
-
-.input-group {
-
-
-    background:#f8fafc;
-
-    border:1px solid #d1d5db;
-
-    padding:14px 16px;
-
-    border-radius:12px;
-
-    margin-bottom:15px;
+    margin-top:35px;
 
 
 }
 
 
 
-.input-group label {
+.login-form label{
 
 
     display:block;
 
-    font-size:.7rem;
+    margin-bottom:7px;
 
-    font-weight:800;
+    font-size:13px;
+
+    font-weight:700;
 
     color:#475569;
-
-    text-transform:uppercase;
 
 
 }
 
 
 
-.input-group input {
+
+.login-form input{
 
 
     width:100%;
 
-    border:none;
+    padding:15px;
+
+    margin-bottom:18px;
+
+
+    border-radius:12px;
+
+    border:
+
+    1px solid #cbd5e1;
+
 
     outline:none;
 
-    background:transparent;
-
-    margin-top:5px;
-
-    font-size:1rem;
+    font-size:15px;
 
 
 }
@@ -300,15 +200,25 @@ html, body {
 
 
 
-.btn-connexion {
+.login-form input:focus{
+
+
+    border-color:#d4af37;
+
+
+}
+
+
+
+
+
+.login-form button{
 
 
     width:100%;
 
     padding:16px;
 
-
-    border:none;
 
     border-radius:30px;
 
@@ -317,385 +227,73 @@ html, body {
 
     linear-gradient(
     135deg,
-    #003B5C,
-    #16803C
+    #d4af37,
+    #f7d774
     );
 
 
-    color:white;
+    font-weight:800;
 
-
-    font-weight:900;
-
-    cursor:pointer;
-
-
-    letter-spacing:1px;
+    color:#071426;
 
 
 }
 
 
 
-.btn-connexion:hover {
 
 
-    opacity:.9;
+.login-form button:hover{
 
+
+    transform:translateY(-2px);
 
 }
 
 
 
-.security-info {
+
+
+.security-message{
 
 
     text-align:center;
 
     margin-top:20px;
 
+    font-size:12px;
+
     color:#64748b;
 
-    font-size:.75rem;
-
 
 }
 
 
 
 
-@media(max-width:900px){
 
 
-.left-banner{
 
-display:none;
-
-}
-
-
-}/* =====================================
-   APPLICATION CLIENT
+/* =====================================
+   APPLICATION
 ===================================== */
 
 
-.app-container {
+.bank-app{
 
-    max-width:460px;
+
+    max-width:480px;
 
     margin:auto;
 
-    height:100vh;
-
-    background:#f5f7fa;
-
-    display:flex;
-
-    flex-direction:column;
-
-    position:relative;
-
-    box-shadow:
-    0 0 40px rgba(0,0,0,.25);
-
-}
-
-
-
-/* HEADER */
-
-
-.app-header {
-
-
-    background:white;
-
-    padding:14px 16px;
-
-    border-bottom:1px solid #e2e8f0;
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-
-}
-
-
-
-.header-user {
-
-
-    display:flex;
-
-    align-items:center;
-
-    cursor:pointer;
-
-}
-
-
-
-.avatar {
-
-
-    width:40px;
-
-    height:40px;
-
-
-    border-radius:50%;
-
-
-    background:#003B5C;
-
-
-    color:white;
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-
-    font-weight:900;
-
-
-    margin-right:8px;
-
-
-}
-
-
-
-.user-greeting {
-
-
-    margin:0;
-
-    font-size:.65rem;
-
-    font-weight:800;
-
-    color:#16803C;
-
-
-}
-
-
-
-.user-status {
-
-
-    margin:0;
-
-    font-size:.8rem;
-
-    font-weight:700;
-
-
-}
-
-
-
-
-.btn-logout-icon {
-
-
-    border:none;
-
-    background:#fee2e2;
-
-    color:#b91c1c;
-
-
-    padding:7px 12px;
-
-    border-radius:10px;
-
-    font-size:.7rem;
-
-    font-weight:bold;
-
-
-}
-
-
-
-
-
-/* MENU RAPIDE */
-
-
-.quick-menu-overlay {
-
-
-    position:absolute;
-
-    inset:0;
-
-
-    background:
-    rgba(0,0,0,.65);
-
-
-    display:flex;
-
-    align-items:flex-end;
-
-
-    z-index:100;
-
-
-}
-
-
-
-.quick-menu-content {
-
-
-    width:100%;
-
-    background:white;
-
-
-    border-radius:25px 25px 0 0;
-
-
-    padding:24px;
-
-
-}
-
-
-
-.quick-menu-header {
-
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-
-}
-
-
-
-.quick-menu-header h3 {
-
-
-    color:#003B5C;
-
-    font-size:.9rem;
-
-}
-
-
-
-.btn-close-quick {
-
-
-    border:none;
-
-    background:#f1f5f9;
-
-
-    border-radius:50%;
-
-
-    width:32px;
-
-    height:32px;
-
-
-}
-
-
-
-
-
-.quick-item {
+    min-height:100vh;
 
 
     background:#f8fafc;
 
 
-    border:1px solid #e2e8f0;
+    position:relative;
 
-
-    padding:14px;
-
-
-    margin-top:10px;
-
-
-    border-radius:14px;
-
-
-    cursor:pointer;
-
-
-}
-
-
-
-.quick-item:hover {
-
-
-    border-color:#16803C;
-
-    background:#f0fdf4;
-
-
-}
-
-
-
-.quick-item strong {
-
-
-    color:#003B5C;
-
-    font-size:.85rem;
-
-
-}
-
-
-.quick-item p {
-
-
-    margin:3px 0 0;
-
-    color:#64748b;
-
-    font-size:.7rem;
-
-
-}
-
-
-
-
-
-/* CONTENU */
-
-
-.app-main {
-
-
-    flex:1;
-
-    overflow-y:auto;
-
-    padding:16px;
 
     padding-bottom:80px;
 
@@ -704,15 +302,182 @@ display:none;
 
 
 
-.app-section {
 
-    display:none;
+
+.top-header{
+
+
+    background:#071426;
+
+    color:white;
+
+
+    padding:18px;
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
 
 }
 
 
 
-.active-section {
+
+
+.logo-small{
+
+
+    font-weight:900;
+
+    font-size:18px;
+
+    letter-spacing:1px;
+
+
+    color:#d4af37;
+
+
+}
+
+
+
+.logo-small span{
+
+    color:white;
+
+}
+
+
+
+
+.profile-box{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+
+}
+
+
+
+
+.profile-box small{
+
+
+    display:block;
+
+    color:#cbd5e1;
+
+
+}
+
+
+
+.avatar{
+
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+
+    background:#d4af37;
+
+    color:#071426;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    font-weight:900;
+
+
+}
+/* =====================================
+   MENU PRINCIPAL
+===================================== */
+
+
+.main-menu{
+
+    display:flex;
+
+    gap:8px;
+
+    padding:12px;
+
+    overflow-x:auto;
+
+    background:white;
+
+    border-bottom:
+
+    1px solid #e2e8f0;
+
+}
+
+
+
+.main-menu button{
+
+    background:#f1f5f9;
+
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+
+
+
+.main-menu button:hover{
+
+    background:#d4af37;
+
+    color:#071426;
+
+}
+
+
+
+
+
+/* =====================================
+   PAGES
+===================================== */
+
+
+.page{
+
+    display:none;
+
+    padding:20px;
+
+}
+
+
+
+.page.active{
 
     display:block;
 
@@ -720,51 +485,13 @@ display:none;
 
 
 
-.section-title {
+.page h2{
 
+    margin-top:0;
 
-    margin:18px 0 10px;
+    color:#071426;
 
-
-    font-size:.8rem;
-
-    font-weight:900;
-
-    color:#475569;
-
-    text-transform:uppercase;
-
-
-}
-
-
-
-
-/* ALERTE */
-
-
-.alert-blocked-banner {
-
-
-    background:#fff7ed;
-
-
-    border-left:4px solid #D4AF37;
-
-
-    padding:12px;
-
-
-    display:flex;
-
-    gap:10px;
-
-
-    color:#92400e;
-
-
-    font-size:.75rem;
-
+    font-size:22px;
 
 }
 
@@ -772,149 +499,123 @@ display:none;
 
 
 
-/* CARTE COMPTE */
 
 
-.premium-card {
+/* =====================================
+   CARTE PATRIMOINE
+===================================== */
+
+
+.wealth-card{
 
 
     background:
 
     linear-gradient(
     135deg,
-    #003B5C,
-    #001f33
+    #071426,
+    #1e3a5f
     );
 
 
     color:white;
 
 
-    padding:20px;
+    border-radius:22px;
 
-    border-radius:20px;
+
+    padding:25px;
 
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.2);
+
+    0 15px 35px
+    rgba(0,0,0,.25);
+
 
 
 }
 
 
 
-.card-header {
+.wealth-card p{
 
+    color:#cbd5e1;
 
-    display:flex;
-
-    justify-content:space-between;
-
-    font-size:.7rem;
-
+    margin:0;
 
 }
 
 
 
-.badge-account {
+.wealth-card h1{
 
-
-    background:#16803C;
-
-
-    padding:4px 10px;
-
-    border-radius:10px;
-
-    font-weight:bold;
-
-
-}
-
-
-
-.amount {
-
-
-    font-size:2rem;
-
-    font-weight:900;
+    font-size:34px;
 
     margin:15px 0;
 
+    color:#f7d774;
+
 
 }
 
 
 
-.card-footer-info {
 
+.wealth-card span{
+
+    font-size:13px;
+
+}
+
+
+
+
+
+/* =====================================
+   STATISTIQUES
+===================================== */
+
+
+.statistics{
 
     display:flex;
 
-    justify-content:space-between;
+    gap:12px;
 
-    font-size:.7rem;
-
-
-}
-
-
-
-.click-hint {
-
-
-    color:#D4AF37;
-
-    font-weight:bold;
+    margin-top:15px;
 
 
 }
 
 
 
-
-
-/* STATISTIQUES */
-
-
-.stats-grid {
-
-
-    display:flex;
-
-    gap:10px;
-
-    margin-top:12px;
-
-
-}
-
-
-
-.stat-box {
+.stat-box{
 
 
     flex:1;
 
     background:white;
 
-    padding:14px;
+    padding:15px;
 
-    border-radius:14px;
+    border-radius:16px;
 
-    border:1px solid #e2e8f0;
+
+    box-shadow:
+
+    0 5px 15px
+    rgba(0,0,0,.05);
 
 
 }
 
 
 
-.stat-box span {
+.stat-box h3{
 
 
-    font-size:.7rem;
+    font-size:13px;
 
     color:#64748b;
 
@@ -923,50 +624,174 @@ display:none;
 
 
 
-.income strong {
+.stat-box strong{
+
+    font-size:15px;
+
+    color:#071426;
+
+}
 
 
-    color:#16803C;
+
+
+
+
+
+/* =====================================
+   ACTIONS RAPIDES
+===================================== */
+
+
+.quick-actions{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+    margin-top:20px;
 
 
 }
 
 
 
-.expense strong {
+.quick-actions button{
 
 
-    color:#dc2626;
+    background:white;
+
+    border-radius:15px;
+
+    padding:15px 8px;
 
 
-}/* =====================================
+    font-size:12px;
+
+    font-weight:700;
+
+
+    box-shadow:
+
+    0 5px 15px
+    rgba(0,0,0,.06);
+
+
+}
+
+
+
+
+
+
+/* =====================================
+   COMPTES
+===================================== */
+
+
+.account-card{
+
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    margin-bottom:15px;
+
+
+    box-shadow:
+
+    0 5px 20px
+    rgba(0,0,0,.06);
+
+
+}
+
+
+
+.account-card h3{
+
+    margin:0;
+
+    color:#071426;
+
+}
+
+
+
+.account-card p{
+
+    color:#64748b;
+
+}
+
+
+
+.account-card strong{
+
+
+    display:block;
+
+    font-size:25px;
+
+    margin:15px 0;
+
+    color:#d4af37;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
    CARTE BANCAIRE PREMIUM
 ===================================== */
 
 
-.visa-card-ui {
+.bank-card{
 
 
-    background:
+    height:220px;
 
-    linear-gradient(
-    135deg,
-    #003B5C,
-    #0f172a
-    );
+    border-radius:22px;
+
+
+    padding:25px;
 
 
     color:white;
 
 
-    padding:22px;
+    background:
 
 
-    border-radius:20px;
+    linear-gradient(
+    135deg,
+    #111827,
+    #334155
+    );
 
 
     box-shadow:
-    0 12px 30px rgba(0,0,0,.25);
+
+    0 20px 40px
+    rgba(0,0,0,.35);
+
+
+    position:relative;
+
+
+    overflow:hidden;
 
 
 }
@@ -974,94 +799,105 @@ display:none;
 
 
 
-.cc-header {
+
+.bank-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:180px;
+
+    height:180px;
+
+
+    background:
+
+    rgba(212,175,55,.25);
+
+
+    border-radius:50%;
+
+
+    top:-60px;
+
+    right:-40px;
+
+
+}
+
+
+
+
+.card-top{
 
 
     display:flex;
 
     justify-content:space-between;
 
-    align-items:center;
-
-
-}
-
-
-
-.cc-brand {
-
-
-    font-size:.85rem;
 
     font-weight:900;
 
-    letter-spacing:1px;
+    position:relative;
 
 
 }
 
 
 
-.visa-logo {
+.card-top span:last-child{
 
 
-    font-size:1.4rem;
-
-    font-style:italic;
-
-    font-weight:900;
-
-    color:#D4AF37;
+    color:#f7d774;
 
 
 }
 
 
 
-.cc-chip-container {
-
-
-    margin:20px 0;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-
-}
 
 
 
-.cc-chip {
+.chip{
 
 
-    width:45px;
+    width:50px;
 
-    height:32px;
+    height:38px;
+
+
+    margin-top:35px;
+
+
+    border-radius:8px;
 
 
     background:
 
     linear-gradient(
     135deg,
-    #D4AF37,
-    #f8d66d
+    #f7d774,
+    #b8860b
     );
-
-
-    border-radius:6px;
 
 
 }
 
 
 
-.cc-number {
 
 
-    font-size:1.2rem;
+.card-number{
+
+
+    margin-top:30px;
+
+
+    font-size:22px;
 
     letter-spacing:3px;
 
@@ -1072,100 +908,92 @@ display:none;
 
 
 
-.cc-footer {
+.card-details{
 
 
     display:flex;
 
     justify-content:space-between;
 
-    margin-top:18px;
+
+    margin-top:20px;
+
+
+    font-size:13px;
 
 
 }
 
 
 
-.cc-label {
+.card-details small{
 
 
-    display:block;
-
-    font-size:.6rem;
-
-    opacity:.7;
+    color:#cbd5e1;
 
 
 }
-
-
 
 /* =====================================
-   FORMULAIRES
+   VIREMENTS
 ===================================== */
 
 
-.form-card {
+.form-container{
 
 
     background:white;
 
+    padding:20px;
 
-    padding:16px;
-
-
-    border-radius:16px;
+    border-radius:18px;
 
 
-    border:1px solid #e2e8f0;
+    box-shadow:
 
-
-}
-
-
-
-.form-field {
-
-
-    margin-bottom:12px;
+    0 5px 20px
+    rgba(0,0,0,.06);
 
 
 }
 
 
 
-.form-field label {
+.form-container label{
 
 
     display:block;
 
-    font-size:.7rem;
+    margin-top:12px;
 
-    font-weight:800;
+    margin-bottom:6px;
 
-    color:#64748b;
 
-    margin-bottom:5px;
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#475569;
 
 
 }
 
 
 
-.form-field input,
-.form-field select {
+.form-container input{
 
 
     width:100%;
 
-
-    padding:11px;
-
-
-    border-radius:10px;
+    padding:14px;
 
 
-    border:1px solid #cbd5e1;
+    border-radius:12px;
+
+
+    border:
+
+    1px solid #cbd5e1;
 
 
     outline:none;
@@ -1175,149 +1003,384 @@ display:none;
 
 
 
-.btn-action {
+.form-container input:focus{
+
+
+    border-color:#d4af37;
+
+
+}
+
+
+
+
+.form-container button{
 
 
     width:100%;
 
-
-    padding:14px;
-
-
-    border:none;
+    margin-top:20px;
 
 
-    border-radius:12px;
+    padding:15px;
 
 
-    background:
+    border-radius:30px;
 
-    linear-gradient(
-    135deg,
-    #003B5C,
-    #16803C
-    );
+
+    background:#071426;
 
 
     color:white;
 
 
-    font-weight:900;
-
-
-    cursor:pointer;
+    font-weight:800;
 
 
 }
+
+
+
+.form-container button:hover{
+
+
+    background:#d4af37;
+
+    color:#071426;
+
+
+}
+
+
 
 
 
 
 
 /* =====================================
-   EPARGNE
+   HISTORIQUE VIREMENTS
 ===================================== */
 
 
-.savings-summary-box {
+#transfer-history{
+
+
+    margin-top:20px;
+
+
+}
+
+
+
+.transfer-item{
 
 
     background:white;
+
+
+    padding:15px;
+
+
+    border-radius:14px;
+
+
+    margin-bottom:10px;
+
+
+    box-shadow:
+
+    0 4px 12px
+    rgba(0,0,0,.05);
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   EPARGNE & INVESTISSEMENTS
+===================================== */
+
+
+.investment-card{
+
+
+    background:white;
+
+
+    padding:20px;
+
+
+    border-radius:18px;
+
+
+    margin-bottom:15px;
+
+
+    border-left:
+
+    5px solid #d4af37;
+
+
+
+}
+
+
+
+.investment-card h3{
+
+
+    margin-top:0;
+
+    color:#071426;
+
+
+}
+
+
+
+.investment-card strong{
+
+
+    font-size:26px;
+
+    color:#d4af37;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   DOCUMENTS
+===================================== */
+
+
+.document-card{
+
+
+    background:white;
+
+
+    padding:18px;
 
 
     border-radius:16px;
 
 
-    padding:16px;
+    margin-bottom:12px;
 
 
-    display:flex;
+    box-shadow:
 
-
-    justify-content:space-between;
-
-
-    border:1px solid #e2e8f0;
+    0 5px 15px
+    rgba(0,0,0,.06);
 
 
 }
 
 
 
-.sum-item span {
+.document-card h3{
 
 
-    font-size:.65rem;
+    margin-top:0;
+
+}
+
+
+
+.document-card p{
+
 
     color:#64748b;
 
-    display:block;
+
+}
+
+
+
+.document-card button{
+
+
+    padding:10px 18px;
+
+
+    border-radius:20px;
+
+
+    background:#071426;
+
+
+    color:white;
+
+
+    font-weight:700;
 
 
 }
 
 
 
-.sum-item strong {
-
-
-    font-size:.95rem;
-
-    color:#003B5C;
-
-
-}
-
-
-
-.text-green {
-
-
-    color:#16803C!important;
-
-
-}
 
 
 
 
-.savings-actions-grid {
+
+/* =====================================
+   MESSAGERIE
+===================================== */
 
 
-    display:flex;
-
-    gap:8px;
-
-
-}
-
-
-
-.btn-savings-op {
-
-
-    flex:1;
+.message-box{
 
 
     background:white;
 
 
-    border:1px solid #16803C;
+    border-radius:18px;
 
 
-    color:#16803C;
+    padding:20px;
 
 
-    padding:10px;
+    box-shadow:
 
-
-    border-radius:10px;
-
-
-    font-weight:bold;
+    0 5px 20px
+    rgba(0,0,0,.06);
 
 
 }
+
+
+
+.advisor{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.advisor span{
+
+
+    color:#64748b;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+.message-content{
+
+
+    background:#f1f5f9;
+
+
+    padding:15px;
+
+
+    border-radius:15px;
+
+
+    line-height:1.5;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.message-box button{
+
+
+    margin-top:15px;
+
+
+    width:100%;
+
+
+    padding:13px;
+
+
+    border-radius:25px;
+
+
+    background:#d4af37;
+
+
+    font-weight:800;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   NOTIFICATIONS
+===================================== */
+
+
+.notification{
+
+
+    background:white;
+
+
+    padding:16px;
+
+
+    border-radius:15px;
+
+
+    margin-bottom:10px;
+
+
+    box-shadow:
+
+    0 4px 12px
+    rgba(0,0,0,.05);
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
 
 
 
@@ -1326,81 +1389,109 @@ display:none;
 ===================================== */
 
 
-.clickable-setting-row {
+.settings-card{
+
+
+    background:white;
+
+
+    border-radius:18px;
+
+
+    padding:15px;
+
+
+}
+
+
+
+.setting-line{
 
 
     display:flex;
 
-    justify-content:space-between;
 
-    align-items:center;
+    justify-content:space-between;
 
 
     padding:14px 0;
 
 
-    border-bottom:1px solid #f1f5f9;
+    border-bottom:
 
-
-    font-size:.8rem;
-
-
-}
-
-
-
-.badge-active {
-
-
-    background:#dcfce7;
-
-
-    color:#166534;
-
-
-    padding:3px 8px;
-
-
-    border-radius:8px;
-
-
-    font-size:.7rem;
-
-
-    font-weight:bold;
+    1px solid #e2e8f0;
 
 
 }
 
 
 
+.setting-line:last-child{
 
+
+    border-bottom:none;
+
+
+}
+
+
+
+.setting-line span{
+
+
+    color:#64748b;
+
+
+}
+
+
+
+.logout-btn{
+
+
+    margin-top:25px;
+
+
+    width:100%;
+
+
+    padding:15px;
+
+
+    border-radius:30px;
+
+
+    background:#dc2626;
+
+
+    color:white;
+
+
+    font-weight:800;
+
+
+}
 /* =====================================
-   NAVIGATION BASSE
+   NAVIGATION MOBILE BASSE
 ===================================== */
 
 
-.app-nav {
+.bottom-nav{
 
 
-    position:absolute;
-
+    position:fixed;
 
     bottom:0;
-
 
     left:0;
 
     right:0;
 
 
-    height:65px;
+    height:70px;
 
 
     background:white;
-
-
-    border-top:1px solid #e2e8f0;
 
 
     display:flex;
@@ -1412,20 +1503,25 @@ display:none;
     align-items:center;
 
 
+    border-top:
+
+    1px solid #e2e8f0;
+
+
+    box-shadow:
+
+    0 -5px 20px
+    rgba(0,0,0,.08);
+
+
+    z-index:1000;
+
+
 }
 
 
 
-.nav-item {
-
-
-    background:none;
-
-
-    border:none;
-
-
-    cursor:pointer;
+.nav-button{
 
 
     display:flex;
@@ -1437,27 +1533,146 @@ display:none;
     align-items:center;
 
 
+    gap:4px;
+
+
+    font-size:11px;
+
+
     color:#64748b;
 
 
-}
-
-
-
-.nav-icon {
-
-
-    font-size:1.2rem;
+    background:none;
 
 
 }
 
 
 
-.nav-label {
+.nav-button span{
 
 
-    font-size:.65rem;
+    font-size:22px;
+
+
+}
+
+
+
+.nav-button.active{
+
+
+    color:#071426;
+
+
+    font-weight:800;
+
+
+}
+
+
+
+
+
+
+/* =====================================
+   MODALES
+===================================== */
+
+
+.modal{
+
+
+    display:none;
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:
+
+    rgba(0,0,0,.65);
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    z-index:2000;
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+.modal-box{
+
+
+    background:white;
+
+
+    width:100%;
+
+
+    max-width:420px;
+
+
+    border-radius:25px;
+
+
+    padding:25px;
+
+
+    animation:
+
+    popup .25s ease;
+
+
+}
+
+
+
+
+.modal-box h2{
+
+
+    margin-top:0;
+
+
+    color:#071426;
+
+
+}
+
+
+
+
+.modal-close{
+
+
+    float:right;
+
+
+    background:#f1f5f9;
+
+
+    border-radius:50%;
+
+
+    width:35px;
+
+
+    height:35px;
+
 
     font-weight:bold;
 
@@ -1466,60 +1681,337 @@ display:none;
 
 
 
-.active-nav {
 
 
-    color:#16803C;
+@keyframes popup{
+
+
+    from{
+
+
+        transform:scale(.8);
+
+
+        opacity:0;
+
+
+    }
+
+
+    to{
+
+
+        transform:scale(1);
+
+
+        opacity:1;
+
+
+    }
 
 
 }
+
+
+
 
 
 
 
 /* =====================================
-   ANIMATION
+   ALERTES
 ===================================== */
 
 
-button {
+.alert{
 
 
-    transition:.2s;
+    padding:15px;
+
+
+    border-radius:15px;
+
+
+    margin-bottom:15px;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+.alert-success{
+
+
+    background:#dcfce7;
+
+
+    color:#166534;
 
 
 }
 
 
 
-button:hover {
+.alert-warning{
 
 
-    transform:translateY(-1px);
+    background:#fef3c7;
+
+
+    color:#92400e;
+
+
+}
+
+
+
+.alert-danger{
+
+
+    background:#fee2e2;
+
+
+    color:#991b1b;
 
 
 }
 
 
 
-/* MOBILE */
-
-@media(max-width:500px){
 
 
-.app-container{
 
-    width:100%;
+
+/* =====================================
+   CHARGEMENT
+===================================== */
+
+
+.loading{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
 
 }
 
 
 
-.brand-logo-main{
+.loader{
 
-    font-size:2rem;
+
+    width:35px;
+
+
+    height:35px;
+
+
+    border-radius:50%;
+
+
+    border:
+
+    4px solid #e2e8f0;
+
+
+    border-top-color:#d4af37;
+
+
+    animation:
+
+    spin 1s linear infinite;
+
 
 }
 
 
+
+@keyframes spin{
+
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+
 }
+
+
+
+
+
+
+
+/* =====================================
+   RESPONSIVE MOBILE
+===================================== */
+
+
+@media(max-width:600px){
+
+
+
+    body{
+
+
+        padding-bottom:75px;
+
+
+    }
+
+
+
+    .header{
+
+
+        padding:15px;
+
+
+    }
+
+
+
+    .logo{
+
+
+        font-size:20px;
+
+
+    }
+
+
+
+    .wealth-card h1{
+
+
+        font-size:27px;
+
+
+    }
+
+
+
+    .statistics{
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+    .quick-actions{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+
+    .bank-card{
+
+
+        height:200px;
+
+
+    }
+
+
+
+    .card-number{
+
+
+        font-size:18px;
+
+
+    }
+
+
+
+    .page{
+
+
+        padding:15px;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =====================================
+   EFFETS PREMIUM
+===================================== */
+
+
+.glass{
+
+
+    background:
+
+    rgba(255,255,255,.75);
+
+
+    backdrop-filter:
+
+    blur(12px);
+
+
+}
+
+
+
+.gold-text{
+
+
+    color:#d4af37;
+
+
+}
+
+
+
+.shadow-premium{
+
+
+    box-shadow:
+
+    0 15px 40px
+    rgba(0,0,0,.15);
+
+
+}
+
+
+
+.rounded-xl{
+
+
+    border-radius:25px;
+
+
+   }
