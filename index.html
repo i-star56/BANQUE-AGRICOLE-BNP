@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BANQUE AGRICOLE BNP - Espace Client</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-bank-theme">
+
+<!-- ==============================
+     ECRAN DE CONNEXION
+================================ -->
+
+<div class="login-wrapper" id="login-screen">
+
+    <div class="left-banner">
+
+        <div class="banner-content">
+
+            <div class="bank-symbol">
+                🌿
+            </div>
+
+            <h1 class="brand-logo-main">
+                BANQUE AGRICOLE
+                <span>BNP</span>
+            </h1>
+
+            <p class="tagline">
+                Construire aujourd'hui, financer demain.
+                <br>
+                Une banque moderne au service de vos projets.
+            </p>
+
+            <div class="security-points">
+
+                <p>🔒 Sécurité bancaire avancée</p>
+                <p>🌱 Solutions d'épargne adaptées</p>
+                <p>📊 Gestion financière intelligente</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="right-form-container">
+
+        <div class="form-box">
+
+
+            <h1 class="brand-logo-form">
+
+                BANQUE AGRICOLE
+                <span>BNP</span>
+
+            </h1>
+
+
+            <h3 class="login-title">
+
+                Connexion à votre Espace Client
+
+            </h3>
+
+
+            <div class="input-group">
+
+                <label for="username">
+                    Identifiant Client
+                </label>
+
+                <input 
+                    type="text"
+                    id="username"
+                    placeholder="Saisissez votre identifiant"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label for="password">
+                    Code Secret / Mot de passe
+                </label>
+
+                <input 
+                    type="password"
+                    id="password"
+                    placeholder="Votre code secret"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <button 
+                class="btn-connexion"
+                onclick="login()">
+
+                SE CONNECTER
+
+            </button>
+
+
+
+            <div class="security-info">
+
+                🔒 Connexion sécurisée et protégée
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div><!-- ==============================
+     APPLICATION CLIENT
+================================ -->
+
+<div class="app-container" id="app-screen" style="display:none;">
+
+
+<header class="app-header">
+
+
+    <div class="header-left">
+
+        <h1 class="brand-logo-header">
+
+            BANQUE AGRICOLE
+            <span>BNP</span>
+
+        </h1>
+
+    </div>
+
+
+
+    <div class="header-user" onclick="toggleQuickMenu()">
+
+
+        <div class="avatar">
+
+            EG
+
+        </div>
+
+
+        <div class="user-info-text">
+
+            <p class="user-greeting">
+                ESPACE CLIENT
+            </p>
+
+
+            <p class="user-status">
+                M. Edmond Garnier
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <button 
+        onclick="logout()" 
+        class="btn-logout-icon">
+
+        Déconnexion
+
+    </button>
+
+
+</header>
+
+
+
+
+<!-- MENU CLIENT -->
+
+<div 
+id="quick-menu-modal" 
+class="quick-menu-overlay"
+style="display:none;">
+
+
+<div class="quick-menu-content">
+
+
+<div class="quick-menu-header">
+
+
+<h3>
+GESTION ESPACE CLIENT
+</h3>
+
+
+<button 
+class="btn-close-quick"
+onclick="toggleQuickMenu()">
+
+✕
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="quick-menu-grid">
+
+
+
+<div class="quick-item"
+onclick="showSection('home-section');toggleQuickMenu();">
+
+<span class="q-icon">
+📊
+</span>
+
+<strong>
+Gestion du compte
+</strong>
+
+<p>
+Solde, opérations et synthèse
+</p>
+
+</div>
+
+
+
+
+<div class="quick-item"
+onclick="showSection('card-section');toggleQuickMenu();">
+
+<span class="q-icon">
+💳
+</span>
+
+<strong>
+Cartes bancaires
+</strong>
+
+<p>
+Gestion de votre carte
+</p>
+
+</div>
+
+
+
+
+
+<div class="quick-item"
+onclick="openEdocuments();toggleQuickMenu();">
+
+<span class="q-icon">
+📄
+</span>
+
+<strong>
+Documents bancaires
+</strong>
+
+<p>
+Relevés et archives PDF
+</p>
+
+</div>
+
+
+
+
+
+<div class="quick-item"
+onclick="openMessaging();toggleQuickMenu();">
+
+<span class="q-icon">
+💬
+</span>
+
+<strong>
+Conseiller bancaire
+</strong>
+
+<p>
+Messagerie sécurisée
+</p>
+
+</div>
+
+
+
+
+<div class="quick-item"
+onclick="showSection('settings-section');toggleQuickMenu();">
+
+<span class="q-icon">
+⚙️
+</span>
+
+<strong>
+Paramètres
+</strong>
+
+<p>
+Sécurité et informations personnelles
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<main class="app-main">
+
+
+
+<!-- ALERTE COMPTE -->
+
+<div class="alert-blocked-banner">
+
+<span class="icon">
+🔒
+</span>
+
+
+<div>
+
+<strong<!-- ==============================
+     VIREMENTS
+================================ -->
+
+<div id="transfer-section" class="app-section">
+
+<div class="section-title">
+Effectuer un virement sécurisé
+</div>
+
+
+<div class="transfer-types-grid">
+
+<button class="type-btn active" id="type-immediat"
+onclick="selectTransferType('immediat')">
+
+<strong>
+Virement immédiat
+</strong>
+
+<small>
+Traitement rapide
+</small>
+
+</button>
+
+
+<button class="type-btn" id="type-instantane"
+onclick="selectTransferType('instantane')">
+
+<strong>
+Virement instantané
+</strong>
+
+<small>
+Quelques secondes
+</small>
+
+</button>
+
+
+<button class="type-btn" id="type-differe"
+onclick="selectTransferType('differe')">
+
+<strong>
+Virement différé
+</strong>
+
+<small>
+Programmer une date
+</small>
+
+</button>
+
+
+<button class="type-btn" id="type-permanent"
+onclick="selectTransferType('permanent')">
+
+<strong>
+Virement permanent
+</strong>
+
+<small>
+Automatique
+</small>
+
+</button>
+
+</div>
+
+
+
+
+<div class="form-card" id="form-container">
+
+
+<div class="form-field">
+
+<label>
+Compte débiteur
+</label>
+
+<select disabled>
+
+<option>
+Compte principal BAP (*8842)
+</option>
+
+</select>
+
+</div>
+
+
+
+
+<div class="form-field">
+
+<label>
+Bénéficiaire
+</label>
+
+<input 
+id="beneficiary"
+type="text"
+placeholder="Nom du bénéficiaire">
+
+</div>
+
+
+
+<div class="form-field">
+
+<label>
+IBAN bénéficiaire
+</label>
+
+<input
+id="iban-input"
+type="text"
+placeholder="FR76 XXXX XXXX">
+
+</div>
+
+
+
+
+<div class="form-field">
+
+<label>
+Montant (€)
+</label>
+
+<input
+id="amount-input"
+type="number"
+placeholder="0.00">
+
+</div>
+
+
+
+
+<div class="form-field">
+
+<label>
+Motif
+</label>
+
+<input
+id="reason-input"
+type="text"
+placeholder="Motif du virement">
+
+</div>
+
+
+
+<button 
+class="btn-action"
+onclick="startTransferAnimation()">
+
+Valider le virement
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- ==============================
+     EPARGNE
+================================ -->
+
+
+<div id="savings-section" class="app-section">
+
+
+<div class="section-title">
+
+Épargne et placements
+
+</div>
+
+
+
+<div class="savings-summary-box">
+
+
+<div class="sum-item">
+
+<span>
+Solde épargne
+</span>
+
+<strong id="total-savings-balance">
+173 650,00 €
+</strong>
+
+
+</div>
+
+
+
+<div class="sum-item">
+
+<span>
+Intérêts acquis
+</span>
+
+<strong class="text-green">
++4 820,50 €
+</strong>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="savings-actions-grid">
+
+
+<button class="btn-savings-op"
+onclick="depositSavings(1)">
+
+📥 Alimenter
+
+</button>
+
+
+<button class="btn-savings-op"
+onclick="withdrawSavings(1)">
+
+📤 Retirer
+
+</button>
+
+
+
+<button class="btn-savings-op"
+onclick="configureAutoDeposit()">
+
+🔄 Automatique
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<!-- ==============================
+     CARTE BANCAIRE
+================================ -->
+
+
+<div id="card-section" class="app-section">
+
+
+<div class="section-title">
+
+Carte bancaire BAP Premium
+
+</div>
+
+
+
+
+<div class="visa-card-ui">
+
+
+<div class="cc-header">
+
+<span class="cc-brand">
+
+BANQUE AGRICOLE BNP
+
+</span>
+
+
+<span class="visa-logo">
+
+VISA
+
+</span>
+
+
+</div>
+
+
+
+
+<div class="cc-chip-container">
+
+<div class="cc-chip"></div>
+
+<span>
+📡
+</span>
+
+</div>
+
+
+
+
+<div class="cc-number">
+
+4589 •••• •••• 8842
+
+</div>
+
+
+
+<div class="cc-footer">
+
+
+<div>
+
+<span class="cc-label">
+TITULAIRE
+</span>
+
+<span class="cc-value">
+EDMOND GARNIER
+</span>
+
+</div>
+
+
+
+<div>
+
+<span class="cc-label">
+EXPIRATION
+</span>
+
+<span class="cc-value">
+12/28
+</span>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<!-- ==============================
+     PARAMETRES
+================================ -->
+
+
+<div id="settings-section" class="app-section">
+
+
+<div class="section-title">
+
+Sécurité et paramètres
+
+</div>
+
+
+
+<div class="form-card">
+
+
+<div class="clickable-setting-row">
+
+<span>
+Changer le mot de passe
+</span>
+
+<span>
+🔑
+</span>
+
+</div>
+
+
+
+<div class="clickable-setting-row">
+
+<span>
+Authentification biométrique
+</span>
+
+<input type="checkbox" checked>
+
+</div>
+
+
+
+<div class="clickable-setting-row">
+
+<span>
+Appareil de confiance
+</span>
+
+<span class="badge-active">
+Actif
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+</main>
+
+
+
+
+
+<!-- NAVIGATION BASSE -->
+
+
+<nav class="app-nav">
+
+
+<button class="nav-item active-nav"
+onclick="showSection('home-section')">
+
+<span class="nav-icon">
+🏠
+</span>
+
+<span class="nav-label">
+Accueil
+</span>
+
+</button>
+
+
+
+<button class="nav-item"
+onclick="showSection('transfer-section')">
+
+<span class="nav-icon">
+💸
+</span>
+
+<span class="nav-label">
+Virements
+</span>
+
+</button>
+
+
+
+<button class="nav-item"
+onclick="showSection('savings-section')">
+
+<span class="nav-icon">
+🌱
+</span>
+
+<span class="nav-label">
+Épargne
+</span>
+
+</button>
+
+
+
+<button class="nav-item"
+onclick="showSection('card-section')">
+
+<span class="nav-icon">
+💳
+</span>
+
+<span class="nav-label">
+Carte
+</span>
+
+</button>
+
+
+
+<button class="nav-item"
+onclick="showSection('settings-section')">
+
+<span class="nav-icon">
+⚙️
+</span>
+
+<span class="nav-label">
+Profil
+</span>
+
+</button>
+
+
+</nav>
+
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
