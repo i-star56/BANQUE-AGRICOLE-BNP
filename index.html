@@ -1,190 +1,121 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BANQUE AGRICOLE BNP - Espace Client</title>
+<title>Nova Capital - Espace Client</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class="bg-bank-theme">
+<body>
+
 
 <!-- ==============================
      ECRAN DE CONNEXION
 ================================ -->
 
-<div class="login-wrapper" id="login-screen">
+<div id="login-page" class="login-page">
 
-    <div class="left-banner">
+    <div class="login-card">
 
-        <div class="banner-content">
-
-            <div class="bank-symbol">
-                🌿
-            </div>
-
-            <h1 class="brand-logo-main">
-                BANQUE AGRICOLE
-                <span>BNP</span>
+        <div class="brand">
+            <h1>
+                NOVA <span>CAPITAL</span>
             </h1>
 
-            <p class="tagline">
-                Construire aujourd'hui, financer demain.
-                <br>
-                Une banque moderne au service de vos projets.
+            <p>
+                Votre espace financier nouvelle génération
             </p>
-
-            <div class="security-points">
-
-                <p>🔒 Sécurité bancaire avancée</p>
-                <p>🌱 Solutions d'épargne adaptées</p>
-                <p>📊 Gestion financière intelligente</p>
-
-            </div>
-
         </div>
 
-    </div>
+
+        <div class="login-form">
+
+            <label>
+                Identifiant client
+            </label>
+
+            <input 
+            type="text"
+            id="client-id"
+            placeholder="Votre identifiant">
 
 
-    <div class="right-form-container">
+            <label>
+                Code d'accès
+            </label>
 
-        <div class="form-box">
-
-
-            <h1 class="brand-logo-form">
-
-                BANQUE AGRICOLE
-                <span>BNP</span>
-
-            </h1>
+            <input 
+            type="password"
+            id="client-password"
+            placeholder="Votre mot de passe">
 
 
-            <h3 class="login-title">
-
-                Connexion à votre Espace Client
-
-            </h3>
-
-
-            <div class="input-group">
-
-                <label for="username">
-                    Identifiant Client
-                </label>
-
-                <input 
-                    type="text"
-                    id="username"
-                    placeholder="Saisissez votre identifiant"
-                    autocomplete="off"
-                >
-
-            </div>
-
-
-
-            <div class="input-group">
-
-                <label for="password">
-                    Code Secret / Mot de passe
-                </label>
-
-                <input 
-                    type="password"
-                    id="password"
-                    placeholder="Votre code secret"
-                    autocomplete="off"
-                >
-
-            </div>
-
-
-
-            <button 
-                class="btn-connexion"
-                onclick="login()">
-
+            <button onclick="login()">
                 SE CONNECTER
-
             </button>
 
 
+            <div class="security-message">
 
-            <div class="security-info">
-
-                🔒 Connexion sécurisée et protégée
+                🔒 Connexion sécurisée
+                <br>
+                Protection renforcée de votre espace client
 
             </div>
 
 
         </div>
 
-
     </div>
 
+</div>
 
-</div><!-- ==============================
-     APPLICATION CLIENT
+
+
+
+
+<!-- ==============================
+     APPLICATION PRINCIPALE
 ================================ -->
 
-<div class="app-container" id="app-screen" style="display:none;">
+
+<div id="bank-app" class="bank-app hidden">
 
 
-<header class="app-header">
+<!-- HEADER -->
+
+<header class="top-header">
 
 
-    <div class="header-left">
-
-        <h1 class="brand-logo-header">
-
-            BANQUE AGRICOLE
-            <span>BNP</span>
-
-        </h1>
-
+    <div class="logo-small">
+        NOVA <span>CAPITAL</span>
     </div>
 
 
-
-    <div class="header-user" onclick="toggleQuickMenu()">
-
+    <div class="profile-box">
 
         <div class="avatar">
-
             EG
-
         </div>
 
+        <div>
 
-        <div class="user-info-text">
+            <strong>
+                Edmond Garnier
+            </strong>
 
-            <p class="user-greeting">
-                ESPACE CLIENT
-            </p>
-
-
-            <p class="user-status">
-                M. Edmond Garnier
-            </p>
-
+            <small>
+                Client Premium
+            </small>
 
         </div>
 
 
     </div>
-
-
-
-    <button 
-        onclick="logout()" 
-        class="btn-logout-icon">
-
-        Déconnexion
-
-    </button>
 
 
 </header>
@@ -192,31 +123,139 @@
 
 
 
-<!-- MENU CLIENT -->
-
-<div 
-id="quick-menu-modal" 
-class="quick-menu-overlay"
-style="display:none;">
 
 
-<div class="quick-menu-content">
+<!-- MENU PRINCIPAL -->
 
 
-<div class="quick-menu-header">
+<nav class="main-menu">
 
+
+<button onclick="showPage('dashboard')">
+🏠 Accueil
+</button>
+
+
+<button onclick="showPage('accounts')">
+💰 Comptes
+</button>
+
+
+<button onclick="showPage('cards')">
+💳 Cartes
+</button>
+
+
+<button onclick="showPage('transfers')">
+💸 Virements
+</button>
+
+
+<button onclick="showPage('settings')">
+⚙️ Paramètres
+</button>
+
+
+</nav>
+
+
+
+
+
+
+
+<!-- ==============================
+     TABLEAU DE BORD
+================================ -->
+
+
+<section id="dashboard" class="page active">
+
+
+<h2>
+Vue générale
+</h2>
+
+
+
+<div class="wealth-card">
+
+
+<p>
+Patrimoine total
+</p>
+
+
+<h1>
+7 585 024,00 €
+</h1>
+
+
+<span>
+Solde disponible
+</span>
+
+
+</div>
+
+
+
+
+
+<div class="statistics">
+
+
+<div class="stat-box">
 
 <h3>
-GESTION ESPACE CLIENT
+Revenus
 </h3>
 
+<strong>
++8 450 024,00 €
+</strong>
 
-<button 
-class="btn-close-quick"
-onclick="toggleQuickMenu()">
+</div>
 
-✕
 
+
+
+<div class="stat-box">
+
+<h3>
+Dépenses
+</h3>
+
+<strong>
+-865 000,00 €
+</strong>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="quick-actions">
+
+
+<button>
+📄 Documents
+</button>
+
+
+<button>
+📊 Statistiques
+</button>
+
+
+<button>
+💬 Messagerie
 </button>
 
 
@@ -224,235 +263,215 @@ onclick="toggleQuickMenu()">
 
 
 
+</section><!-- ==============================
+     COMPTES
+================================ -->
 
-<div class="quick-menu-grid">
-
-
-
-<div class="quick-item"
-onclick="showSection('home-section');toggleQuickMenu();">
-
-<span class="q-icon">
-📊
-</span>
-
-<strong>
-Gestion du compte
-</strong>
-
-<p>
-Solde, opérations et synthèse
-</p>
-
-</div>
+<section id="accounts" class="page">
 
 
+<h2>
+Mes comptes
+</h2>
 
 
-<div class="quick-item"
-onclick="showSection('card-section');toggleQuickMenu();">
+<div class="account-card">
 
-<span class="q-icon">
-💳
-</span>
-
-<strong>
-Cartes bancaires
-</strong>
+<h3>
+Compte Principal
+</h3>
 
 <p>
-Gestion de votre carte
+Compte courant Premium
 </p>
-
-</div>
-
-
-
-
-
-<div class="quick-item"
-onclick="openEdocuments();toggleQuickMenu();">
-
-<span class="q-icon">
-📄
-</span>
 
 <strong>
-Documents bancaires
+7 585 024,00 €
 </strong>
 
-<p>
-Relevés et archives PDF
-</p>
+<div>
+IBAN : FR00 XXXX XXXX XXXX 0000
+</div>
 
 </div>
 
 
 
+<div class="account-card">
 
+<h3>
+Compte Épargne
+</h3>
 
-<div class="quick-item"
-onclick="openMessaging();toggleQuickMenu();">
-
-<span class="q-icon">
-💬
-</span>
+<p>
+Réserve financière
+</p>
 
 <strong>
-Conseiller bancaire
+173 650,00 €
 </strong>
-
-<p>
-Messagerie sécurisée
-</p>
 
 </div>
 
 
 
 
-<div class="quick-item"
-onclick="showSection('settings-section');toggleQuickMenu();">
+<div class="account-card">
 
-<span class="q-icon">
-⚙️
-</span>
+<h3>
+Investissements
+</h3>
+
+<p>
+Portefeuille financier
+</p>
 
 <strong>
-Paramètres
+980 000,00 €
 </strong>
 
-<p>
-Sécurité et informations personnelles
-</p>
-
 </div>
 
 
-
-</div>
-
-
-</div>
-
-
-</div>
+</section>
 
 
 
 
 
-<main class="app-main">
+<!-- ==============================
+     CARTES BANCAIRES
+================================ -->
+
+<section id="cards" class="page">
+
+
+<h2>
+Mes cartes
+</h2>
 
 
 
-<!-- ALERTE COMPTE -->
+<div class="bank-card">
 
-<div class="alert-blocked-banner">
 
-<span class="icon">
-🔒
+<div class="card-top">
+
+<span>
+NOVA CAPITAL
 </span>
+
+
+<span>
+PREMIUM
+</span>
+
+
+</div>
+
+
+
+<div class="chip">
+
+</div>
+
+
+
+<div class="card-number">
+
+4589  ****  ****  8421
+
+</div>
+
+
+
+<div class="card-details">
 
 
 <div>
 
-<strong<!-- ==============================
+<small>
+TITULAIRE
+</small>
+
+<br>
+
+EDMOND GARNIER
+
+</div>
+
+
+
+<div>
+
+<small>
+EXPIRATION
+</small>
+
+<br>
+
+12/30
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="card-controls">
+
+
+<button>
+🔒 Bloquer temporairement
+</button>
+
+
+<button>
+⚙️ Modifier les plafonds
+</button>
+
+
+<button>
+🌍 Paiements internationaux
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ==============================
      VIREMENTS
 ================================ -->
 
-<div id="transfer-section" class="app-section">
 
-<div class="section-title">
-Effectuer un virement sécurisé
-</div>
+<section id="transfers" class="page">
 
 
-<div class="transfer-types-grid">
-
-<button class="type-btn active" id="type-immediat"
-onclick="selectTransferType('immediat')">
-
-<strong>
-Virement immédiat
-</strong>
-
-<small>
-Traitement rapide
-</small>
-
-</button>
-
-
-<button class="type-btn" id="type-instantane"
-onclick="selectTransferType('instantane')">
-
-<strong>
-Virement instantané
-</strong>
-
-<small>
-Quelques secondes
-</small>
-
-</button>
-
-
-<button class="type-btn" id="type-differe"
-onclick="selectTransferType('differe')">
-
-<strong>
-Virement différé
-</strong>
-
-<small>
-Programmer une date
-</small>
-
-</button>
-
-
-<button class="type-btn" id="type-permanent"
-onclick="selectTransferType('permanent')">
-
-<strong>
-Virement permanent
-</strong>
-
-<small>
-Automatique
-</small>
-
-</button>
-
-</div>
+<h2>
+Effectuer un virement
+</h2>
 
 
 
+<div class="form-container">
 
-<div class="form-card" id="form-container">
-
-
-<div class="form-field">
-
-<label>
-Compte débiteur
-</label>
-
-<select disabled>
-
-<option>
-Compte principal BAP (*8842)
-</option>
-
-</select>
-
-</div>
-
-
-
-
-<div class="form-field">
 
 <label>
 Bénéficiaire
@@ -460,73 +479,66 @@ Bénéficiaire
 
 <input 
 id="beneficiary"
-type="text"
 placeholder="Nom du bénéficiaire">
 
-</div>
 
-
-
-<div class="form-field">
 
 <label>
-IBAN bénéficiaire
+IBAN
 </label>
 
-<input
-id="iban-input"
-type="text"
-placeholder="FR76 XXXX XXXX">
-
-</div>
+<input 
+id="iban"
+placeholder="FR00 XXXX XXXX">
 
 
-
-
-<div class="form-field">
 
 <label>
-Montant (€)
+Montant
 </label>
 
-<input
-id="amount-input"
+<input 
+id="transfer-amount"
 type="number"
-placeholder="0.00">
-
-</div>
+placeholder="0,00 €">
 
 
-
-
-<div class="form-field">
 
 <label>
 Motif
 </label>
 
-<input
-id="reason-input"
-type="text"
+<input 
+id="reason"
 placeholder="Motif du virement">
 
-</div>
 
 
-
-<button 
-class="btn-action"
-onclick="startTransferAnimation()">
+<button onclick="makeTransfer()">
 
 Valider le virement
 
 </button>
 
 
+
 </div>
 
 
+
+
+<h3>
+Derniers virements
+</h3>
+
+
+<div id="transfer-history">
+
 </div>
+
+
+</section>
+
 
 
 
@@ -537,28 +549,30 @@ Valider le virement
 ================================ -->
 
 
-<div id="savings-section" class="app-section">
+<section id="savings" class="page">
 
 
-<div class="section-title">
-
+<h2>
 Épargne et placements
-
-</div>
-
+</h2>
 
 
-<div class="savings-summary-box">
+
+<div class="investment-card">
 
 
-<div class="sum-item">
+<h3>
+Compte croissance
+</h3>
 
-<span>
-Solde épargne
-</span>
 
-<strong id="total-savings-balance">
-173 650,00 €
+<p>
+Performance annuelle simulée
+</p>
+
+
+<strong>
++4,2 %
 </strong>
 
 
@@ -566,150 +580,137 @@ Solde épargne
 
 
 
-<div class="sum-item">
 
-<span>
-Intérêts acquis
-</span>
+<div class="investment-card">
 
-<strong class="text-green">
-+4 820,50 €
+
+<h3>
+Placement long terme
+</h3>
+
+
+<p>
+Valeur actuelle
+</p>
+
+
+<strong>
+450 000,00 €
 </strong>
 
 
 </div>
 
 
-</div>
+</section><!-- ==============================
+     DOCUMENTS
+================================ -->
+
+<section id="documents" class="page">
+
+<h2>
+Mes documents
+</h2>
 
 
+<div class="document-card">
 
-<div class="savings-actions-grid">
+<h3>
+📄 Relevés de compte
+</h3>
 
+<p>
+Relevé mensuel - Juillet 2026
+</p>
 
-<button class="btn-savings-op"
-onclick="depositSavings(1)">
-
-📥 Alimenter
-
+<button>
+Consulter
 </button>
-
-
-<button class="btn-savings-op"
-onclick="withdrawSavings(1)">
-
-📤 Retirer
-
-</button>
-
-
-
-<button class="btn-savings-op"
-onclick="configureAutoDeposit()">
-
-🔄 Automatique
-
-</button>
-
 
 </div>
 
 
 
+<div class="document-card">
+
+<h3>
+📄 Attestation bancaire
+</h3>
+
+<p>
+Document numérique disponible
+</p>
+
+<button>
+Ouvrir
+</button>
+
 </div>
+
+
+
+<div class="document-card">
+
+<h3>
+📄 Historique annuel
+</h3>
+
+<p>
+Synthèse financière 2025
+</p>
+
+<button>
+Voir
+</button>
+
+</div>
+
+
+</section>
+
+
+
 
 
 
 
 
 <!-- ==============================
-     CARTE BANCAIRE
+     MESSAGERIE
 ================================ -->
 
 
-<div id="card-section" class="app-section">
+<section id="messages" class="page">
 
 
-<div class="section-title">
+<h2>
+Messagerie sécurisée
+</h2>
 
-Carte bancaire BAP Premium
 
+
+<div class="message-box">
+
+
+<div class="advisor">
+
+<div class="avatar">
+JM
 </div>
 
 
+<div>
 
+<strong>
+Jean Martin
+</strong>
 
-<div class="visa-card-ui">
-
-
-<div class="cc-header">
-
-<span class="cc-brand">
-
-BANQUE AGRICOLE BNP
-
-</span>
-
-
-<span class="visa-logo">
-
-VISA
-
-</span>
-
-
-</div>
-
-
-
-
-<div class="cc-chip-container">
-
-<div class="cc-chip"></div>
+<br>
 
 <span>
-📡
+Conseiller clientèle Premium
 </span>
 
-</div>
-
-
-
-
-<div class="cc-number">
-
-4589 •••• •••• 8842
-
-</div>
-
-
-
-<div class="cc-footer">
-
-
-<div>
-
-<span class="cc-label">
-TITULAIRE
-</span>
-
-<span class="cc-value">
-EDMOND GARNIER
-</span>
-
-</div>
-
-
-
-<div>
-
-<span class="cc-label">
-EXPIRATION
-</span>
-
-<span class="cc-value">
-12/28
-</span>
 
 </div>
 
@@ -718,11 +719,86 @@ EXPIRATION
 
 
 
+<div class="message-content">
+
+
+Bonjour Edmond,
+
+<br><br>
+
+Votre espace client est disponible.
+Votre conseiller reste à votre disposition
+pour toute demande.
+
 </div>
 
 
 
+<button>
+Nouveau message
+</button>
+
+
+
 </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==============================
+     NOTIFICATIONS
+================================ -->
+
+
+<section id="notifications" class="page">
+
+
+<h2>
+Notifications
+</h2>
+
+
+
+<div class="notification">
+
+🔔
+Nouvelle opération enregistrée
+
+</div>
+
+
+
+<div class="notification">
+
+🔔
+Votre relevé mensuel est disponible
+
+</div>
+
+
+
+<div class="notification">
+
+🔔
+Sécurité : dernière connexion validée
+
+</div>
+
+
+
+</section>
+
+
+
+
 
 
 
@@ -733,59 +809,69 @@ EXPIRATION
 ================================ -->
 
 
-<div id="settings-section" class="app-section">
+<section id="settings" class="page">
 
 
-<div class="section-title">
-
-Sécurité et paramètres
-
-</div>
+<h2>
+Paramètres du compte
+</h2>
 
 
 
-<div class="form-card">
+<div class="settings-card">
 
 
-<div class="clickable-setting-row">
+<div class="setting-line">
 
 <span>
-Changer le mot de passe
+Nom complet
 </span>
+
+<strong>
+Edmond Garnier
+</strong>
+
+</div>
+
+
+
+<div class="setting-line">
 
 <span>
-🔑
+Statut
 </span>
+
+<strong>
+Client Premium
+</strong>
 
 </div>
 
 
 
-<div class="clickable-setting-row">
+<div class="setting-line">
 
 <span>
-Authentification biométrique
+Sécurité biométrique
 </span>
 
-<input type="checkbox" checked>
+<strong>
+Activée
+</strong>
 
 </div>
 
 
 
-<div class="clickable-setting-row">
+<div class="setting-line">
 
 <span>
-Appareil de confiance
+Appareil connecté
 </span>
 
-<span class="badge-active">
-Actif
-</span>
-
-
-</div>
-
+<strong>
+Smartphone autorisé
+</strong>
 
 </div>
 
@@ -796,93 +882,39 @@ Actif
 
 
 
-</main>
+<button class="logout-btn" onclick="logout()">
 
-
-
-
-
-<!-- NAVIGATION BASSE -->
-
-
-<nav class="app-nav">
-
-
-<button class="nav-item active-nav"
-onclick="showSection('home-section')">
-
-<span class="nav-icon">
-🏠
-</span>
-
-<span class="nav-label">
-Accueil
-</span>
+Déconnexion
 
 </button>
 
 
 
-<button class="nav-item"
-onclick="showSection('transfer-section')">
-
-<span class="nav-icon">
-💸
-</span>
-
-<span class="nav-label">
-Virements
-</span>
-
-</button>
+</section>
 
 
 
-<button class="nav-item"
-onclick="showSection('savings-section')">
-
-<span class="nav-icon">
-🌱
-</span>
-
-<span class="nav-label">
-Épargne
-</span>
-
-</button>
 
 
 
-<button class="nav-item"
-onclick="showSection('card-section')">
-
-<span class="nav-icon">
-💳
-</span>
-
-<span class="nav-label">
-Carte
-</span>
-
-</button>
 
 
-
-<button class="nav-item"
-onclick="showSection('settings-section')">
-
-<span class="nav-icon">
-⚙️
-</span>
-
-<span class="nav-label">
-Profil
-</span>
-
-</button>
+<!-- ==============================
+     FOOTER
+================================ -->
 
 
-</nav>
+<footer>
+
+
+<p>
+© 2026 Nova Capital - Interface de démonstration
+</p>
+
+
+</footer>
+
+
 
 
 
@@ -891,5 +923,144 @@ Profil
 
 <script src="script.js"></script>
 
+
 </body>
+
+</html><!-- ==============================
+     NAVIGATION MOBILE
+================================ -->
+
+<div class="bottom-navigation">
+
+
+<button onclick="showPage('dashboard')">
+
+🏠
+
+<span>
+Accueil
+</span>
+
+</button>
+
+
+
+<button onclick="showPage('accounts')">
+
+💰
+
+<span>
+Comptes
+</span>
+
+</button>
+
+
+
+<button onclick="showPage('cards')">
+
+💳
+
+<span>
+Cartes
+</span>
+
+</button>
+
+
+
+<button onclick="showPage('transfers')">
+
+💸
+
+<span>
+Virement
+</span>
+
+</button>
+
+
+
+<button onclick="showPage('settings')">
+
+⚙️
+
+<span>
+Plus
+</span>
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ==============================
+     MODALE INFORMATIONS
+================================ -->
+
+
+<div id="info-modal" class="modal hidden">
+
+
+<div class="modal-content">
+
+
+<button class="close-modal">
+✕
+</button>
+
+
+<h3>
+Information
+</h3>
+
+
+<p id="modal-text">
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- ==============================
+     NOTIFICATION POPUP
+================================ -->
+
+
+<div id="toast" class="toast hidden">
+
+
+<span id="toast-message">
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+<!-- SCRIPT -->
+
+<script src="script.js"></script>
+
+
+</body>
+
 </html>
